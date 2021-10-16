@@ -1,0 +1,42 @@
+name: Build Arcade Offset Database
+
+on:
+  schedule:
+  - cron:  "*/20 * * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - uses: actions/checkout@v2
+  
+    - name: Gather Files
+      run: ./.github/gather_files.sh 'delme' 'registry.txt'
+      env:
+        DB_ID: arcade_offset_folder
+        DB_URL: https://raw.githubusercontent.com/atrac17/Arcade_Offset/db/arcadeoffsetdb.json.zip
+        REPOSITORY_URL: https://github.com/atrac17/Arcade_Offset
+        BASE_FILES_URL: https://raw.githubusercontent.com/atrac17/Arcade_Offset/%s/
+        LATEST_ZIP_URL: https://github.com/atrac17/Arcade_Offset/archive/refs/heads/db.zip
+
+    - name: Calculate Database
+      run: |
+        set -euo pipefail
+        git config --global user.email "theypsilon@gmail.com"
+        git config --global user.name "The CI/CD Bot"
+        cd delme
+        SHA=$(git rev-parse --verify HEAD)
+        TIME=$(git log -1 --format=%cd --date=format:'%Y/%m/%d %H:%M:%S')
+        cd ..
+        ./.github/calculate_db.py "${SHA}" "${TIME}"
+      env:
+        HEADER:
+        DB_ID: arcade_offset_folder
+        FOLDER: delme
+        REGISTRY: registry.txt
+        BRANCH: db
+        DB_URL: https://raw.githubusercontent.com/atrac17/Arcade_Offset/db/arcadeoffsetdb.json.zip
+        BASE_FILES_URL: https://raw.githubusercontent.com/atrac17/Arcade_Offset/%s/
+        LATEST_ZIP_URL: https://github.com/atrac17/Arcade_Offset/archive/refs/heads/db.zip
