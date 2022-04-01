@@ -21,8 +21,8 @@
 
 <misterromdescription>
     <about author="jotego" webpage="https://patreon.com/topapate" source="https://github.com/jotego" twitter="@topapate"/>
-    <name>Street Fighter Alpha 3 (Euro 980904)</name>
-    <setname>sfa3XL</setname>
+    <name>Street Fighter Alpha 3 (Xian Long)</name>
+    <setname>sfa3xl</setname>
     <rbf>jtcps2</rbf>
     <mameversion>0229</mameversion>
     <year>1998</year>
