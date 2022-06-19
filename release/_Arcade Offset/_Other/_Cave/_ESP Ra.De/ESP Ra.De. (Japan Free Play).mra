@@ -15,11 +15,11 @@
       <part name="u41_ver.2" crc="734b3ef0" map="10" />
     </interleave>
 
-    <!-- sound ROM -->
-    <part name="esp_u19.u19" crc="f54b1cab" />
-
     <!-- EEPROM -->
     <part name="eeprom-esprade.bin" crc="315fb546" />
+	
+	<!-- sound ROM -->
+    <part name="esp_u19.u19" crc="f54b1cab" />
 
     <!-- layer 0 -->
     <part name="esp_u54.u54" crc="e7ca6936" />
@@ -43,10 +43,10 @@
     </interleave>
 
     <!-- enable C button and freeplay mode in EEPROM -->
-    <patch offset="0x00500002">00 ef</patch>
-    <patch offset="0x00500008">00 f4</patch>
+    <patch offset="0x00100002">00 ef</patch>
+    <patch offset="0x00100008">00 f4</patch>
 	
-	<!-- Free Play Option -->
+	<!-- Free Play Option By Mikejmoffitt -->
 	<patch offset="0x0000400D">F9 00 07 A4 36</patch>
 	<patch offset="0x000040F0">4E F9 00 07 A3 9C</patch>
 	<patch offset="0x000041FA">4E F9 00 07 A4 66</patch>
