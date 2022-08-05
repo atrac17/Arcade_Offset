@@ -108,6 +108,16 @@
 
 </details>
 
+<details>
+<summary><b>Toaplan 1</b></summary>
+
+| Title         | Core        | Information | Directory | Date Available |
+|---------------|-------------|-------------|-----------|----------------|
+[**Zero Wings (No Red Flash) Hack**](https://github.com/atrac17/Arcade_Offset/blob/main/release/_Arcade%20Offset/_Other/Zero%20Wing%20(2P%20set)%20%5BNo%20Flash%5D.mra) | [**toaplan1**](https://github.com/va7deo/zerowing/tree/main/releases) | [**N/A**] | Main | 20220321 |
+
+  
+</details>
+
 
 ## Patched MRA Format
 
