@@ -48,7 +48,7 @@
         <!-- key - starts at 0x0 -->
         <part name="phoenix.key" crc="2cf772b0"/>
         <!-- maincpu - starts at 0x14 -->
-        <part name="ff-23m.8h" crc="65f11215"/>
+        <part name="ff-23m.8h" crc="b598d599"/>
         <part name="ff-22m.7h" crc="3615cfb9"/>
         <part repeat="0x300000">FF</part>
         <!-- audiocpu - starts at 0x400014 -->
