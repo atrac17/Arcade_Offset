@@ -32,7 +32,7 @@
     <rotation>horizontal</rotation>
     <region>World</region>
     <platform>CPS-1</platform>
-    <category>Fighting<category/>
+    <category>Fighting</category>
     <catver>Fighter / Versus</catver>
     <mraauthor>jotego,atrac17</mraauthor>
     <rom index="0" zip="sf2dkot2.zip|sf2ce.zip" md5="None">
