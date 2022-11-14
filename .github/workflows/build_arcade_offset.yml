@@ -1,8 +1,9 @@
 name: Build Arcade Offset Database
 
 on:
-  schedule:
-  - cron:  "*/20 * * * *"
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
