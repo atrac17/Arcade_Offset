@@ -1,12 +1,7 @@
 #!/usr/bin/env bash
-# Copyright (c) 2021 José Manuel Barroso Galindo <theypsilon@gmail.com>
+# Copyright (c) 2021-2022 José Manuel Barroso Galindo <theypsilon@gmail.com>
 
 set -euo pipefail
-
-curl -o /tmp/update_distribution.source "https://raw.githubusercontent.com/MiSTer-devel/Distribution_MiSTer/main/.github/update_distribution.sh"
-
-source /tmp/update_distribution.source
-rm /tmp/update_distribution.source
 
 update_distribution() {
     local TMP_FOLDER="${1}"
@@ -33,6 +28,18 @@ update_distribution() {
     popd
 
     cat "${REGISTRY}"
+}
+
+download_repository() {
+    local FOLDER="${1}"
+    local GIT_URL="${2}"
+    local BRANCH="${3}"
+    pushd "${TMP_FOLDER}" > /dev/null 2>&1
+    git init -q
+    git remote add origin "${GIT_URL}"
+    git -c protocol.version=2 fetch --depth=1 -q --no-tags --prune --no-recurse-submodules origin "${BRANCH}"
+    git checkout -qf FETCH_HEAD
+    popd > /dev/null 2>&1
 }
 
 if [[ "${BASH_SOURCE[0]}" == "${0}" ]] ; then
