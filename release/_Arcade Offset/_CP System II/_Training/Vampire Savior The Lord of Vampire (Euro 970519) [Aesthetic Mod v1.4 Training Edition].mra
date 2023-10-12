@@ -91,6 +91,7 @@
         <patch offset="0x000219c4">4d 41 00 46 04 09</patch>
         <patch offset="0x0002f6f8">0e c6 7a 7d 54 61 34 b6 5b 1f d2 fb 6b 96 8b 47 e6 c7 66 b5 8a 26 85 e3</patch>
         <patch offset="0x0002f7f6">75 54 bc bc</patch>
+        <patch offset="0x00029ad0">19 64</patch>
         <patch offset="0x00033590">2e 08 7c 51 0c 5c 4a a2</patch>
         <patch offset="0x00037f2e">5b eb c2 a9 c1 5d</patch>
         <patch offset="0x00037f36">16 c2 0b 71 2a 89</patch>
